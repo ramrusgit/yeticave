@@ -59,24 +59,78 @@ $user_avatar = 'img/user.jpg';
     <section class="promo">
         <h2 class="promo__title">Нужен стафф для катки?</h2>
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
+
         <ul class="promo__list">
+
+            <?
+                $cat = ["Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"];
+
+            $lots = [
+                [
+                    'title' => '2014 Rossignol District Snowboard',
+                    'category' => "$cat[0]",
+                    'price' => 10999,
+                    'url-img' => 'img/lot-1.jpg'
+                ],
+
+                [
+                    'title' => 'DC Ply Mens 2016/2017 Snowboard',
+                    'category' => $cat[0],
+                    'price' => 159999,
+                    'url-img' => 'img/lot-2.jpg'
+                ],
+
+                [
+                    'title' => 'Крепления Union Contact Pro 2015 года размер L/XL',
+                    'category' => $cat[1],
+                    'price' => 8000,
+                    'url-img' => 'img/lot-3.jpg'
+                ],
+
+                [
+                    'title' => 'Ботинки для сноуборда DC Mutiny Charocal',
+                    'category' => $cat[2],
+                    'price' => 10999,
+                    'url-img' => 'img/lot-4.jpg'
+                ],
+
+                [
+                    'title' => 'Куртка для сноуборда DC Mutiny Charocal',
+                    'category' => $cat[3],
+                    'price' => 7500,
+                    'url-img' => 'img/lot-5.jpg'
+                ],
+
+                [
+                    'title' => 'Маска Oakley Canopy',
+                    'category' => $cat[5],
+                    'price' => 5400,
+                    'url-img' => 'img/lot-5.jpg'
+                ]
+
+            ];
+
+            //echo $lots[0]['category'];
+
+            ?>
+
             <li class="promo__item promo__item--boards">
-                <a class="promo__link" href="all-lots.html">Доски и лыжи</a>
+                <a class="promo__link" href="all-lots.html"><? echo $cat[0] ?></a>
             </li>
             <li class="promo__item promo__item--attachment">
-                <a class="promo__link" href="all-lots.html">Крепления</a>
+                <a class="promo__link" href="all-lots.html"><? echo $cat[1] ?></a>
             </li>
             <li class="promo__item promo__item--boots">
-                <a class="promo__link" href="all-lots.html">Ботинки</a>
+                <a class="promo__link" href="all-lots.html"><? echo $cat[2] ?></a>
             </li>
             <li class="promo__item promo__item--clothing">
-                <a class="promo__link" href="all-lots.html">Одежда</a>
+                <a class="promo__link" href="all-lots.html"><? echo $cat[3] ?></a>
             </li>
             <li class="promo__item promo__item--tools">
-                <a class="promo__link" href="all-lots.html">Инструменты</a>
+                <a class="promo__link" href="all-lots.html"><? echo $cat[4] ?></a>
             </li>
             <li class="promo__item promo__item--other">
-                <a class="promo__link" href="all-lots.html">Разное</a>
+                <a class="promo__link" href="all-lots.html"><? echo $cat[5] ?></a>
             </li>
         </ul>
     </section>
