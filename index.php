@@ -151,8 +151,8 @@ $user_avatar = 'img/user.jpg';
                             <span class="lot__amount">Стартовая цена</span>
                             <span class="lot__cost">10 999<b class="rub">р</b></span>
                         </div>
+                        <? } ?>
                         <div class="lot__timer timer">
-
                         </div>
                     </div>
                 </div>
