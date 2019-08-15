@@ -152,6 +152,22 @@ $user_avatar = 'img/user.jpg';
                             <span class="lot__cost">10 999<b class="rub">р</b></span>
                         </div>
                         <? } ?>
+                        <?
+                        // formatted number with letter R
+                        function price () {
+                            global $value;
+                            $pricefloat = ceil($value['price']);
+
+                            if ($pricefloat <= 999) {
+                                echo $pricefloat;
+                            } elseif ($pricefloat >= 1000) {
+                                $num_format = number_format($pricefloat, 0, '.', ' ');
+                                echo $num_format . " &#8381;";
+                            }
+                        }
+
+                        // price();
+                        ?>
                         <div class="lot__timer timer">
                         </div>
                     </div>
@@ -165,22 +181,12 @@ $user_avatar = 'img/user.jpg';
     <nav class="nav">
         <ul class="nav__list container">
             <li class="nav__item">
-                <a href="all-lots.html">Доски и лыжи</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Крепления</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Ботинки</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Одежда</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Инструменты</a>
-            </li>
-            <li class="nav__item">
-                <a href="all-lots.html">Разное</a>
+                <? for ($arr = 0; $arr < count($cat); $arr++) { ?>
+                <a href="all-lots.html">
+
+                    <?
+                            echo $cat[$arr]; } ?>
+                </a>
             </li>
         </ul>
     </nav>
