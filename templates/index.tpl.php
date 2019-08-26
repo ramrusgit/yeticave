@@ -111,6 +111,7 @@ $lots = [
                         <? endforeach; ?>
 
                         <div class="lot__timer timer">
+                            <? time_until_midnight() ?>
                         </div>
                     </div>
                 </div>
